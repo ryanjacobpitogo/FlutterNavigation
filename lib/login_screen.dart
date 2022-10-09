@@ -12,7 +12,6 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Image.asset('login_bckground.png').color,
       body: Container(
         decoration: const BoxDecoration(
           image: DecorationImage(
@@ -24,24 +23,33 @@ class _LoginScreenState extends State<LoginScreen> {
           child: Center(
             child: SingleChildScrollView(
               child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                 //logo
-                const SizedBox(height: 15),
-                Text(
-                  "Login",
-                  style: GoogleFonts.lato(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 24,
-                  ),
+                Image.asset(
+                  'assets/bearNap.png',
+                  height: 200,
                 ),
-                const SizedBox(height: 15),
-                Text(
-                  "I miss u",
-                  style: GoogleFonts.lato(
-                    fontSize: 24,
-                  ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text("\"Your one stop shop for ",
+                      style: GoogleFonts.lato(
+                        fontSize: 20,
+                        fontStyle: FontStyle.italic
+                      )
+                    ),
+                    Text("bear-napping\"",
+                      style: GoogleFonts.lato(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 20,
+                        fontStyle: FontStyle.italic,
+                        color: Colors.brown
+                      ),
+                    ),
+                  ],
                 ),
-                const SizedBox(height: 15),
+                const SizedBox(height: 20),
                 //username
                 Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 30),
@@ -99,7 +107,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   child: Container(
                     padding: const EdgeInsets.all(10),
                     decoration: BoxDecoration(
-                      color: Colors.deepOrange,
+                      color: Colors.brown,
                       borderRadius: BorderRadius.circular(15)
                     ),
                     child: Center(
@@ -117,9 +125,20 @@ class _LoginScreenState extends State<LoginScreen> {
                 const SizedBox(height: 15),  
                 //regis button
                 Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text("No account yet?"),
-                    Text("No account yet?"),
+                    Text("No account yet?",
+                      style: GoogleFonts.lato(
+                        fontWeight: FontWeight.bold
+                      )
+                    ),
+                   Text(" Click here to register.",
+                      style: GoogleFonts.lato(
+                         fontWeight: FontWeight.bold,
+                         color: Colors.brown
+                      ),
+                    ),
+                    
                   ],
                 )
                 ]
